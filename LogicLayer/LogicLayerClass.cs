@@ -11,6 +11,7 @@ namespace LogicLayer
     public class LogicLayerClass:ILogicLayer
     {
         private readonly IDataLayer _dataLayer;
+
         public LogicLayerClass(IDataLayer dataLayer)
         {
             _dataLayer = dataLayer;
@@ -21,7 +22,6 @@ namespace LogicLayer
         {
             var data = _dataLayer.postAll(Employees);
             return Employees;
-            
         }
 
         public List<DbModel> GetLogic()
