@@ -8,6 +8,7 @@ namespace ReparcityPattern.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly ILogicLayer _ilogicLayer;
+
         public EmployeeController(ILogicLayer ilogicLayer)
         {
             _ilogicLayer = ilogicLayer;
