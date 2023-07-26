@@ -11,5 +11,9 @@ namespace DataLayer
     {
         public List<DbModel> GetAll();
         public object postAll(DbModel Employees);
+
+        public object editAll(DbModel Employees);
+
+        public object deleteRow(int id);
     }
 }

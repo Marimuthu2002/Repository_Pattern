@@ -13,6 +13,7 @@ namespace ReparcityPattern.Controllers
         {
             _ilogicLayer = ilogicLayer;
         }
+
         [HttpGet("getEmployeeDetails")]
 
         public IActionResult getall()
@@ -29,5 +30,19 @@ namespace ReparcityPattern.Controllers
             return Ok(datas);
         }
 
+        [HttpPut("editEmployeeDetails")]
+
+        public IActionResult EditEmployee(DbModel postData)
+        {
+            var editData = _ilogicLayer.editEmployeeDetail(postData);
+            return Ok(editData);
+        }
+
+        [HttpDelete("deleteData")]
+        public IActionResult DeleteEmployee(int id)
+        {
+            var deleteData = _ilogicLayer.deletEmployeeDetail(id);
+            return Ok(deleteData);
+        }
     }
 }

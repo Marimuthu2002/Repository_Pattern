@@ -17,11 +17,22 @@ namespace LogicLayer
             _dataLayer = dataLayer;
         }
 
-
         public object AddUpdateEmployee(DbModel Employees)
         {
             var data = _dataLayer.postAll(Employees);
             return Employees;
+        }
+
+        public object deletEmployeeDetail(int id)
+        {
+            var data = _dataLayer.deleteRow(id);
+            return data;
+        }
+
+        public object editEmployeeDetail(DbModel editData)
+        {
+            var data = _dataLayer.editAll(editData);
+            return editData;
         }
 
         public List<DbModel> GetLogic()

@@ -16,5 +16,5 @@ namespace Entityes
         public DbSet<DbModel> Employee { get; set; }
         public DbSet<PostDbModel> Employees { get; set; }
 
-    }
+    } 
 }

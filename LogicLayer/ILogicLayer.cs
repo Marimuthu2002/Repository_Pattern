@@ -9,7 +9,11 @@ namespace LogicLayer
 {
     public interface ILogicLayer
     {
+
         public List<DbModel> GetLogic();
         object AddUpdateEmployee(DbModel Employees);
+        object editEmployeeDetail(DbModel postData);
+
+        object deletEmployeeDetail(int id);
     }
 }
